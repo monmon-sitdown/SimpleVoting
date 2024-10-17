@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { ethers } = require("ethers");
-const Voting = require("../voting-dapp/src/Voting.json"); // 导入合约的 ABI 和网络信息
+const Voting = require("../voting-dapp/src/Voting.json");
 
 async function main() {
   const provider = new ethers.providers.JsonRpcProvider(
@@ -19,7 +19,7 @@ async function main() {
     wallet
   );
 
-  await contract.addCandidate("Dennis");
+  await contract.addCandidate("Elsa");
   console.log("Candidates added");
 }
 

@@ -42,10 +42,10 @@ contract VotingTest is Test {
         voting.addCandidate("Alice");
         voting.addCandidate("Bob");
         voting.vote(1);
-        voting.vote(2); // 这行代码应该触发失败，因为一个地址不能投两次票
+        voting.vote(2); // Failed because of repeating voting
     }
 
     function testFailVoteInvalidCandidate() public {
-        voting.vote(99); // 这行代码应该触发失败，因为没有ID为99的候选人
+        voting.vote(99); // Failed becasue no No.99 candidate
     }
 }
