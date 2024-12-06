@@ -8,7 +8,7 @@ contract DeployVoting is Script {
     function run() external {
         vm.startBroadcast();
 
-        // 部署 Voting 合约
+        // Deploy Voting contract
         Voting voting = new Voting();
 
         console.log("Voting contract deployed at:", address(voting));

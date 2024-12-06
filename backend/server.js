@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 
 app.post("/vote", (req, res) => {
   const { candidateId } = req.body;
-  // 处理投票逻辑，例如记录投票数据或与智能合约交互
+  // Handle voting logic, such as recording voting data or interacting with the smart contract.
   res.send(`Voted for candidate ${candidateId}`);
 });
 
